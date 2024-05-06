@@ -1,16 +1,16 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.androidApplication)
 }
 
 android {
-    namespace = "it.saimao.calculator"
+    namespace = "com.example.calculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "it.saimao.calculator"
+        applicationId = "com.example.calculator"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
+        versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -25,13 +25,19 @@ android {
             )
         }
     }
+    android {
+        buildFeatures {
+            viewBinding=true
+        }
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

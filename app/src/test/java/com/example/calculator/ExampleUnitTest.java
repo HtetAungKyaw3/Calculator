@@ -1,4 +1,4 @@
-package it.saimao.calculator;
+package com.example.calculator;
 
 import org.junit.Test;
 
